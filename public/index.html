@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumnos y Lucio Chad</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Crear Alumnos Activos</h1>
+
+        <form id="alumnoForm">
+            <input type="text" name="nombre" placeholder="Nombre del usuario" required>
+            <input type="number" name="numAlumnos" placeholder="Número de alumnos" required>
+            <input type="text" name="alumnos" placeholder="Alumnos (separados por coma)" required>
+            <button type="submit">Enviar</button>
+        </form>
+
+        <h1>Crear Transformaciones de Lucio Chad</h1>
+
+        <form id="lucioChadForm">
+            <label for="title">Título:</label>
+            <input type="text" id="title" name="title" value="Lucio Chad " required>
+            
+            <label for="description">Descripción:</label>
+            <textarea id="description" name="description" required placeholder="Descripcion de la transformacion"></textarea>
+        
+            <label for="level">Nivel:</label>
+            <input type="number" id="level" name="level" min="0" max="infinity" placeholder="Nivel de la transformacion" required>
+        
+            <label for="image">URL de la imagen:</label>
+            <input type="url" id="image" name="image" required placeholder="Imagen de la transformacion">
+        
+            <button type="submit">Guardar</button>
+        </form>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
