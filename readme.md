@@ -83,7 +83,7 @@ Guarda las transformaciones de Lucio Chad en `luciochad.json`.
 **Cuerpo de la solicitud**:
 ```json
 {
-  "0": {
+  {
     "title": "Lucio Chad",
     "description": "En su forma base...",
     "level": 0,
