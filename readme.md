@@ -3,7 +3,7 @@
 
 ## Descripción
 
-Este proyecto es una API construida con Node.js y Express que permite crear y gestionar datos de alumnos activos y las transformaciones de Lucio Chad. Los datos se almacenan en archivos JSON, lo que permite su persistencia.
+Este proyecto es una API construida con Node.js y Express que permite crear y gestionar datos de alumnos activos y las transformaciones de Lucio Chad. Los datos se almacenan en archivos JSON, con el uso de UUID, las ID seran distintas cada vez que lo creas. lo que permite su persistencia.
 
 ## Características
 
@@ -66,14 +66,25 @@ Guarda los datos de alumnos en `alumnos2024.json`.
 
 **Cuerpo de la solicitud**:
 ```json
-{
-  "title": "Según {el nombre del usuario}, Los {números de alumnos} alumnos más activos en la clase son",
-  "alumnos": [
-    "alumno1",
-    "alumno2",
-    "alumno3"
-  ]
-}
+[
+  {
+    "title": "Según {nombre del usuario}, Los {Numero de alumnos} alumnos más activos en la clase son",
+    "alumnos": [
+      {
+        "id": "{UUID}",
+        "nombre": "{Nombre del alumno}"
+      },
+      {
+        "id": "{UUID}",
+        "nombre": "{Nombre del alumno}"
+      },
+      {
+    "id": "{UUID}",
+        "nombre": "{Nombre del alumno}"
+      }
+    ]
+  }
+]
 ```
 
 ### POST `/luciochad`
@@ -84,6 +95,7 @@ Guarda las transformaciones de Lucio Chad en `luciochad.json`.
 ```json
 {
   {
+    "id": "{UUID}",
     "title": "Lucio Chad",
     "description": "En su forma base...",
     "level": 0,
