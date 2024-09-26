@@ -20,7 +20,7 @@ Este proyecto es una API construida con Node.js y Express que permite crear y ge
 1. Clona el repositorio:
 
    ```bash
-   git clone https://github.com/tu_usuario/api-linda.git
+   git clone https://github.com/4L3z/api-linda.git
    cd api-linda
    ```
 
