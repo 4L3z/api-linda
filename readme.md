@@ -30,21 +30,6 @@ Este proyecto es una API construida con Node.js y Express que permite crear y ge
    npm install
    ```
 
-3. Asegúrate de que tu estructura de archivos sea la siguiente:
-
-```
-api-linda/ 
-├── data/ 
-│ ├── alumnos2024.json 
-│ └── luciochad.json 
-├── public/ 
-│    ├── index.html
-|    ├── styles.css
-│    └── script.js
-├── server.js 
-├── package-lock.json
-└── package.json
-```
 
 ## Uso
 
