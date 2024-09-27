@@ -3,7 +3,7 @@
 
 ## Descripción
 
-Este proyecto es una API construida con Node.js y Express que permite crear y gestionar datos de alumnos activos y las transformaciones de Lucio Chad. Los datos se almacenan en archivos JSON, con el uso de UUID, las ID seran distintas cada vez que lo creas. lo que permite su persistencia.
+Este tarea es una API construida con Node.js y Express que permite crear y gestionar datos de alumnos activos y las transformaciones de Lucio Chad. Los datos se almacenan en archivos JSON, con el uso de UUID, las ID seran distintas cada vez que lo creas. lo que permite su persistencia.
 
 ## Características
 
