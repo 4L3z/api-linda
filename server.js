@@ -54,7 +54,7 @@ app.post('/luciochad', (req, res) => {
     }
 
     const lucioChadData = {
-        id: uuidv4(), // Asigna un ID único
+        id: uuidv4(), // Asigna un UUID
         title: title,
         description: description,
         level: level,
