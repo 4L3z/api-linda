@@ -1,7 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
-const { v4: uuidv4 } = require('uuid'); // Importa uuid
+const { v4: uuidv4 } = require('uuid'); 
 
 const app = express();
 const PORT = 3000;
@@ -27,9 +27,9 @@ app.post('/alumnos', (req, res) => {
         title = `Según ${nombre}, Los ${numAlumnosInt} alumnos más activos en la clase son`;
     }
 
-    // Crear un objeto con un id único
+    // Crear la estructura del json
     const dataToSave = {
-        id: uuidv4(), // Genera un UUID para el objeto superior
+        id: uuidv4(), // Genera un UUID para cada alumno
         title: title,
         alumnos: alumnos.map(alumno => ({ nombre: alumno })) // Cada alumno se guarda como un objeto
     };
@@ -43,14 +43,13 @@ app.post('/alumnos', (req, res) => {
     });
 });
 
-// Ruta para obtener alumnos (si es necesario)
+// Ruta para obtener alumnos 
 app.get('/alumnos', (req, res) => {
-    // Leer el archivo y enviar los datos
     fs.readFile(path.join(__dirname, 'data', 'alumnos2024.json'), 'utf8', (err, data) => {
         if (err) {
             return res.status(500).send('Error al leer los datos');
         }
-        res.json(JSON.parse(data)); // Responde con los datos del archivo
+        res.json(JSON.parse(data));
     });
 });
 
@@ -81,20 +80,20 @@ app.post('/luciochad', (req, res) => {
         let lucioChadArray = [];
         if (data) {
             try {
-                lucioChadArray = JSON.parse(data); // Convertir datos existentes a un array
-                if (!Array.isArray(lucioChadArray)) { // Asegurarse de que sea un array
+                lucioChadArray = JSON.parse(data); 
+                if (!Array.isArray(lucioChadArray)) { 
                     lucioChadArray = [];
                 }
             } catch (parseError) {
-                console.error('Error al parsear el JSON:', parseError); // Imprimir el error de análisis
+                console.error('Error al parsear el JSON:', parseError); 
                 return res.status(500).send('Error al procesar los datos');
             }
         }
 
-        // Agregar el nuevo objeto al array
+        
         lucioChadArray.push(lucioChadData);
 
-        // Escribir el nuevo array en el archivo
+        
         fs.writeFile(path.join(__dirname, 'data', 'luciochad.json'), JSON.stringify(lucioChadArray, null, 2), (err) => {
             if (err) {
                 console.error('Error al guardar los datos de Lucio Chad:', err); // Imprimir el error en la consola
