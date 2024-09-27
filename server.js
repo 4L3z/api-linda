@@ -43,15 +43,6 @@ app.post('/alumnos', (req, res) => {
     });
 });
 
-// Ruta para obtener alumnos 
-app.get('/alumnos', (req, res) => {
-    fs.readFile(path.join(__dirname, 'data', 'alumnos2024.json'), 'utf8', (err, data) => {
-        if (err) {
-            return res.status(500).send('Error al leer los datos');
-        }
-        res.json(JSON.parse(data));
-    });
-});
 
 // Ruta para guardar la información de Lucio Chad
 app.post('/luciochad', (req, res) => {
